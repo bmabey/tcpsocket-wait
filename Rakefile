@@ -5,8 +5,8 @@ begin
   require 'jeweler'
   Jeweler::Tasks.new do |gem|
     gem.name = "tcpsocket-wait"
-    gem.summary = %Q{TODO: one-line summary of your gem}
-    gem.description = %Q{TODO: longer description of your gem}
+    gem.summary = %Q{Adds useful methods onto TCPSocket for detecting when a server is available.}
+    gem.description = %Q{Adds wait_for_service_with_timeout and wait_for_service_termination_with_timeout to TCPSocket}
     gem.email = "ben@benmabey.com"
     gem.homepage = "http://github.com/bmabey/tcpsocket-wait"
     gem.authors = ["Ben Mabey"]
