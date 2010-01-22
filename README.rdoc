@@ -1,16 +1,18 @@
 = tcpsocket-wait
 
-Description goes here.
+Adds (monkey patches) the following methods:
 
-== Note on Patches/Pull Requests
- 
-* Fork the project.
-* Make your feature addition or bug fix.
-* Add tests for it. This is important so I don't break it in a
-  future version unintentionally.
-* Commit, do not mess with rakefile, version, or history.
-  (if you want to have your own version, that is fine but bump version in a commit by itself I can ignore when I pull)
-* Send me a pull request. Bonus points for topic branches.
+  TCPSocket::wait_for_service_with_timeout
+  TCPSocket::wait_for_service_termination_with_timeout
+
+Example usage:
+
+  server.start(PORT)
+  TCPSocket.wait_for_service_with_timeout :host => "localhost", :port => PORT, :timeout => 5
+  talk_to_server
+
+Original code was taken from the Selenium and Webrat projects.
+I extracted it into it's own gem since I found it useful for various other projects.
 
 == Copyright
 
